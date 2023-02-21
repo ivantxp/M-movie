@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#pantalla{
+    margin: 100px 50px;
+    width: 700px;
+    height: 250px;
+    background-color: aqua;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    #personaje{
+        border-radius: 1px solid black;
+        width: 100px;
+        height: 100px;
+        position:absolute;
+        top:200px;
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 2;
+    
+    }
+    #suelo{
+        width: 1400px;
+        height: 100px;
+        margin: auto 0 0px ;
+        top: 250px;
+        left: 50px;
+        background-position: left bottom;
+        background-size: auto auto;
+        background-repeat: no-repeat;
+        background-image: url( "../img/suelo.jfif");
+        z-index: 1;
+    }
+}
+
+@keyframes animacion_personage{
+    0%{
+        background-image: url("../img/c_a.jpg");
+     
+    }
+    25%{
+        background-image: url("../img/c_b.jpg");
+       
+    }
+    50%{
+        background-image: url("../img/c_c.jpg");
+
+    }
+    75%{
+        background-image: url("../img/c_f.jpg")
+    }
+    100%{
+        background-image: url("../img/c_d.jpg");
+        
+    }
+}
+
+.corriendo{  
+    animation: animacion_personage 0.45s steps(4) infinite ;
+}
+
+@keyframes suelo_animacion {
+    from{
+        transform: translate( 0, 0 );
+    }
+    to{
+        transform: translate(-700px, 0);
+    }
+}
+
+.suelo_animacion{
+    animation: suelo_animacion 2000ms infinite linear;}
