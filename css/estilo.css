@@ -4,7 +4,7 @@
 }
 
 #pantalla {
-  margin: 100px 50px;
+  margin: 20px 50px;
   width: 700px;
   height: 250px;
   background-color: aqua;
@@ -14,28 +14,37 @@
 }
 #pantalla #personaje {
   border-radius: 1px solid black;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  top: 160px;
   position: absolute;
-  top: 200px;
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 5;
+  border: solid 1px black;
 }
 #pantalla #suelo {
   width: 1400px;
-  height: 100px;
+  height: 70px;
   margin: auto 0 0px;
   top: 250px;
   left: 50px;
   background-position: left bottom;
-  background-size: auto auto;
+  background-size: auto 150px;
   background-repeat: no-repeat;
   background-image: url("../img/suelo.jfif");
   z-index: 1;
 }
 
+@keyframes animacion_salto {
+  0% {
+    top: 160px;
+  }
+  45% {
+    top: 100px;
+  }
+}
 @keyframes animacion_personage {
   0% {
     background-image: url("../img/c_a.jpg");
@@ -55,6 +64,11 @@
 }
 .corriendo {
   animation: animacion_personage 0.45s steps(4) infinite;
+}
+
+.salto {
+  animation: animacion_salto 5s infinite;
+  background-image: url("../img/c_a.jpg");
 }
 
 @keyframes suelo_animacion {
