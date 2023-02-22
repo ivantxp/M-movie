@@ -1,9 +1,17 @@
 let personaje = document.getElementById("personaje")
-console.dir(personaje) 
+
+personaje.onclick = salto
+
+function salto(){
+    personaje.classList.toggle("salto")
+    personaje.classList.toggle("corriendo")
+    setTimeout()
+}
+
+
+
+
 
 //buscar posivio en las porpiedades de personage
 
-let a = personaje.offsetTop 
-console.log(a)
 
-personaje.offsetTop - 50

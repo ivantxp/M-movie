@@ -38,15 +38,23 @@
         z-index: 1;
     }
 }
+
+
 @keyframes animacion_salto{
     0%{
-        top: 160px
+        top: 160px;
+        background-image: url("../img/salto_2.jpg");
     }
-
-    45%{
-        top:100px
+    55%{
+        top:20px;
+        background-image: url("../img/salto_1.jpg");
+    }
+    100%{
+        top: 160px;
+        background-image: url("../img/salto_1.jpg");
     }
 }
+
 @keyframes animacion_personage{
     0%{
         background-image: url("../img/c_a.jpg");
@@ -56,24 +64,22 @@
     }
     50%{
         background-image: url("../img/c_c.jpg");
-
     }
     75%{
-        background-image: url("../img/c_f.jpg")
+        background-image: url("../img/c_f.jpg");
     }
     100%{
         background-image: url("../img/c_d.jpg");
-        
     }
 }
+
+.salto{
+    animation: animacion_salto 300ms  1 ;
+} 
 .corriendo{  
     animation: animacion_personage 0.45s steps(4) infinite ;
 }  
-.salto{
-    animation: animacion_salto 5s  infinite ;
-    background-image: url("../img/c_a.jpg");
 
-}
 
 
 @keyframes suelo_animacion {
