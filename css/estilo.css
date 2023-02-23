@@ -7,6 +7,7 @@
   margin: 20px 50px;
   width: 700px;
   height: 250px;
+  position: relative;
   background-color: aqua;
   overflow: hidden;
   display: flex;
@@ -16,13 +17,12 @@
   border-radius: 1px solid black;
   width: 70px;
   height: 70px;
-  top: 160px;
+  bottom: 20px;
   position: absolute;
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   z-index: 5;
-  border: solid 1px black;
 }
 #pantalla #suelo {
   width: 1400px;
@@ -39,15 +39,21 @@
 
 @keyframes animacion_salto {
   0% {
-    top: 160px;
+    bottom: 20px;
     background-image: url("../img/salto_2.jpg");
   }
-  55% {
-    top: 20px;
+  40% {
+    bottom: 150px;
+  }
+  50% {
+    bottom: 160px;
+  }
+  60% {
+    bottom: 150px;
     background-image: url("../img/salto_1.jpg");
   }
   100% {
-    top: 160px;
+    bottom: 20px;
     background-image: url("../img/salto_1.jpg");
   }
 }
